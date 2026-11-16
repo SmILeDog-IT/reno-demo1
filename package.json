@@ -1,0 +1,22 @@
+{
+  "name": "xiaofan-finance-clone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "小番财务（仿）— 小微企业流水账财务系统",
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node --watch server/src/index.js",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "node server/src/index.js",
+    "reset": "node server/src/reset.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "sql.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
